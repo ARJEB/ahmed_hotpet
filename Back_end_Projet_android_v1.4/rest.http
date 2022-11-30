@@ -1,0 +1,47 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Njg1MDgwMjIsImV4cCI6MTY2ODUxMTYyMiwiYXVkIjoiNjM3MzVlM2EwMmM2ODgwNDY0YWJmY2I2IiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.SvO7stbAFxiOevZzP_JnDiVcs910mMfyt6K9GKdRAkY
+
+###Login Route
+POST http://localhost:3000/User/login
+Content-Type: application/json
+
+{
+  "email": "mahdi@gmail.com",
+  "password": "1234"
+}
+
+
+###Register Route
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "email": "amir.hammajjj@gmail.com",
+  "password": "1234",
+  "username": "ahmed"
+}
+
+###Refresh token Route
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Njg1MDgwMDUsImV4cCI6MTcwMDA2NTYwNSwiYXVkIjoiNjM3MzVlM2EwMmM2ODgwNDY0YWJmY2I2IiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ._tcqZ1JeBpxZLEKzaqB8zYpTzXqntQI2zYgx1ZGc0d8"
+}
+
+###Logout Route
+DELETE http://localhost:3000/User/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Njg1MDc5MzYsImV4cCI6MTcwMDA2NTUzNiwiYXVkIjoiNjM3MzVlM2EwMmM2ODgwNDY0YWJmY2I2IiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.IXp8wVodh08aYpih1GY2y00AIXeN0_p3QOAuTABW_2Q"
+}
+
+
+###updateuser
+POST http://localhost:3000/User/EditProfile/6372d250eea5b95e00fcfb58
+header name: header value
+{
+  "username":"bohmid"
+}
+content
